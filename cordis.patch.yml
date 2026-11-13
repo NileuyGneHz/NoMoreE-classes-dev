@@ -1,0 +1,13 @@
+# dsh-webclass-zhs bundle patch — inserts the host row into the profile roster.
+# Install with `dsh plugin --profile <name> add dsh-webclass-zhs`; the bundle patch
+# applies automatically. Do NOT insert this row twice in the profile patch —
+# duplicate ids crash the loader.
+- insert:
+    - id: dsh-webclass-zhs
+      name: 'dsh-webclass-zhs'
+      config:
+        bridge: auto
+        gate:
+          enabled: true
+          timeoutMs: 2000
+          routeTtlMinutes: 30

@@ -1,0 +1,15 @@
+{
+  "type": "selector",
+  "children": [
+    {
+      "type": "sequence",
+      "children": [
+        { "type": "cond", "op": "url_known" },
+        { "type": "cond", "op": "skill_present" },
+        { "type": "cond", "op": "page_state_ok" },
+        { "type": "act", "op": "allow" }
+      ]
+    },
+    { "type": "act", "op": "ask_user" }
+  ]
+}

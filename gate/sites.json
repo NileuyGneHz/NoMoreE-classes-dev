@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "sites": [
+    {
+      "id": "zhihuishu",
+      "skill": "webclass-zhs-answer",
+      "match": {
+        "hosts": ["*.zhihuishu.com"],
+        "pathPrefixes": [
+          "/studentReviewTestOrExam/",
+          "/learnPage/",
+          "/masteryHistory/",
+          "/examPreview/",
+          "/point/"
+        ]
+      },
+      "tools": [
+        "site_gate",
+        "zhs_next_section",
+        "zhs_precheck",
+        "zhs_record_result",
+        "zhs_outline_set",
+        "zhs_extension_path"
+      ]
+    }
+  ],
+  "unknown": { "action": "ask_user" }
+}

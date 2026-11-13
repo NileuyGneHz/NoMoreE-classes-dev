@@ -1,0 +1,47 @@
+{
+  "name": "dsh-webclass-zhs",
+  "version": "0.3.0",
+  "description": "WebClass 智慧树：站点 URL 门禁（C++ 行为树）+ 「去提升」答题闭环状态机 + 随插件分发的操控技能与浏览器桥",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "gate",
+    "skills",
+    "vendor",
+    "bin",
+    "scripts",
+    "cordis.patch.yml",
+    "README.md",
+    "NOTICE",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "webclass",
+    "zhihuishu",
+    "behavior-tree",
+    "site-gate"
+  ],
+  "author": "Nileuy",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24",
+    "dsh": "^0.2.1-rc.5"
+  },
+  "dependencies": {
+    "@deepseek-ai/schemastery": "~3.18.5",
+    "ws": "^8.21.0"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

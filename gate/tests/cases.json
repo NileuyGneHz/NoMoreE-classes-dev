@@ -1,0 +1,70 @@
+{
+  "cases": [
+    {
+      "name": "zhihuishu-answer-page-allowed",
+      "input": {
+        "url": "https://studentexamcomh5.zhihuishu.com/studentReviewTestOrExam/1/1/2/abc/1",
+        "skills": ["webclass-zhs-answer"]
+      },
+      "expect": { "decision": "allow", "site": "zhihuishu" }
+    },
+    {
+      "name": "zhihuishu-learn-page-allowed",
+      "input": {
+        "url": "https://ai-smart-course-student-pro.zhihuishu.com/learnPage/1/2/3",
+        "skills": ["webclass-zhs-answer"]
+      },
+      "expect": { "decision": "allow", "site": "zhihuishu" }
+    },
+    {
+      "name": "unknown-host-asks-user",
+      "input": {
+        "url": "https://example.com/course/1",
+        "skills": ["webclass-zhs-answer"]
+      },
+      "expect": { "decision": "ask_user" }
+    },
+    {
+      "name": "known-host-wrong-path-asks-user",
+      "input": {
+        "url": "https://www.zhihuishu.com/home/index.html",
+        "skills": ["webclass-zhs-answer"]
+      },
+      "expect": { "decision": "ask_user" }
+    },
+    {
+      "name": "site-known-skill-missing-asks-user",
+      "input": {
+        "url": "https://studentexamcomh5.zhihuishu.com/studentReviewTestOrExam/1/1/2/abc/1",
+        "skills": []
+      },
+      "expect": { "decision": "ask_user" }
+    },
+    {
+      "name": "skills-service-unavailable-passes",
+      "input": {
+        "url": "https://studentexamcomh5.zhihuishu.com/studentReviewTestOrExam/1/1/2/abc/1",
+        "skills": [],
+        "skillsKnown": false
+      },
+      "expect": { "decision": "allow", "site": "zhihuishu" }
+    },
+    {
+      "name": "page-not-ready-asks-user",
+      "input": {
+        "url": "https://studentexamcomh5.zhihuishu.com/studentReviewTestOrExam/1/1/2/abc/1",
+        "skills": ["webclass-zhs-answer"],
+        "pageReady": false
+      },
+      "expect": { "decision": "ask_user", "site": "zhihuishu" }
+    },
+    {
+      "name": "nonsense-url-asks-user",
+      "input": {
+        "url": "not a url",
+        "skills": ["webclass-zhs-answer"]
+      },
+      "expect": { "decision": "ask_user" }
+    }
+  ]
+}

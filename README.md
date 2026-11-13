@@ -1,5 +1,7 @@
 # dsh-webclass-zhs
 
+![cover](docs/images/cover.jpg)
+
 ## Attribution
 
 > **本包基于以下上游项目构建与再分发，使用前请阅读其许可证：**
@@ -175,3 +177,10 @@ node scripts/verify.mjs          # 包形状 + 门禁用例 + 技能 + vendor + 
 npm pack --dry-run               # 看 tarball 内容（需 npm）
 npm publish
 ```
+
+## Sponsor
+
+如果这个项目帮你省下了重复点网课的时间，欢迎请作者喝杯水（**¥3**，微信扫码即可）：
+
+<img src="docs/images/sponsor.jpg" alt="微信赞赏码" width="260" />
+
